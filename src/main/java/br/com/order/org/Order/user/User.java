@@ -1,10 +1,8 @@
 package br.com.order.org.Order.user;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
+@Table(name = "USUARIO")
 @Entity
 public class User {
 
@@ -21,6 +19,10 @@ public class User {
     private String password;
 
     public User() {
+    }
+
+    public User(Long userId) {
+        this.id = userId;
     }
 
     public Long getId() {
